@@ -1,0 +1,272 @@
+<!-- bongos binted? -->
+<!DOCTYPE html>
+<link rel="stylesheet" href="styles.css">
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+	<style>
+@media (min-width: 480px) {
+    form {
+        padding: 6rem;
+    }
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --color-darkgreen: #1e3309;
+    --color-green: #849a28;
+    --color-lightgreen: #badd7f;
+    --color-darkpink: #e23260;
+    --color-pink: #f2678e;
+    --color-lightpink: #fca9aa;
+    --color-cream: #f7efda;
+}
+.header {
+    padding: 0 5.5rem;
+    line-height: 1.5rem;
+    margin-bottom: -3.5rem;
+}
+
+body {
+    font-family: "Georgia", serif;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.3rem;
+    color: var(--color-cream);
+    margin: 2rem;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+ background-image: url(https://pbs.twimg.com/media/GZA3tN9XoAAOTeC?format=jpg&name=large);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+.text-center {
+    text-align: center;
+}
+
+h1, p {
+    margin-top: 10;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-weight: bold;
+    line-height: 1.2;
+    text-shadow: 3px 3px 3px var(--color-darkpink);
+}
+
+p {
+    font-size: 1rem;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.description {
+    font-style: italic;
+    font-weight: 200;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+    background: background: rgb(226,50,96);
+background: linear-gradient(0deg, rgba(226,50,96,0.5998774509803921) 0%, rgba(226,50,96,0.5998774509803921) 0%, rgba(226,50,96,0.5998774509803921) 0%);;
+    padding: 0.5rem 0.5rem;
+    border-radius: 1rem;
+}
+
+.form-group {
+    margin: 0 auto 1rem auto;
+    padding: 0rem;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: 2rem;
+    padding: 0.2rem 1rem;
+    color: var(--color-darkgreen);
+    background-color: var(--color-lightpink);
+    background-clip: padding-box;
+    border: 1.5px solid var(--color-darkpink);
+    border-radius: 1rem;
+}
+
+input, button, select, textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+option {
+    font-weight: normal;
+    display: block;
+    padding-block-start: 0px;
+    padding-block-end: 1px;
+    min-block-size: 1.2em;
+    padding-inline: 2px;
+    white-space: nowrap;
+}
+
+.input-textarea {
+    min-height: 120px;
+    width: 100%;
+    padding: 0.7rem;
+    resize: vertical;
+    background-color: var(--color-lightgreen);
+    color: var(--color-darkpink);
+}
+
+.submit-button {
+    display: block;
+    width: 100%;
+    padding: 0.8rem;
+    background: rgb(30,51,9);
+background: linear-gradient(90deg, rgba(30,51,9,0.7035189075630253) 0%, rgba(132,154,40,0.6979166666666667) 50%, rgba(30,51,9,0.700717787114846) 100%);
+    color: inherit;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+button {
+    border: none;
+}
+
+form {
+    background: rgb(226,50,96);
+    background: linear-gradient(0deg, rgba(226,50,96,0.6026785714285714) 15%, rgba(252,169,170,0.6418942577030813) 48%, rgba(89,167,11,0.6643032212885154) 80%);
+    padding: 2rem 2rem;
+    border-radius: 1rem;
+    margin: 5.5rem;
+}
+
+input {
+  margin-top: 0rem;
+}
+
+input::file-selector-button {
+  font-weight: normal;
+  color: var(--color-darkpink);
+  padding: 0.3em;
+  border: 0.1rem solid var(--color-green);
+  border-radius: 5px;
+  background-color: var(--color-lightgreen);
+  margin: 0.3rem;
+}
+
+
+a {
+    color: var(--color-lightgreen);
+}
+</style> 
+
+<!-- AQUI INICIA EL BODY -->
+
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 id="title" class="text-center">ShiJae's Commission Request Form!</h1>
+        <p id="description" class="description text-center">Thank you for taking the time to fill this form! By submitting you are assuring to have read <a href="https://shijaescomissioncenter.carrd.co/">my Carrd (Terms of Service)</a> and having checked my commission status being OPEN. After submitting, I will contact you as soon as possible for additional details.
+        </p>
+      </header>
+      <form id="survey-form" action="https://api.web3forms.com/submit" method="POST">
+        <div class="form-group">
+          <label id="name-label" for="name">Name</label>
+          <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required="">
+        </div>
+	  <input type="hidden" name="access_key" value="50bad540-c06e-40c2-b347-dd9b68159fff">
+          <div class="form-group">
+          <label id="email-label" for="email">Email</label>
+          <input type="email" name="email" id="email" class="form-control" placeholder="Enter your Email" required="">
+          </div>
+        <div class="form-group">
+          <label id="type-label">Type of commission</label>
+          <select id="dropdown" name="Type of shading" class="form-control" required="">
+            <option disabled="" selected="" value="">Select type of shading</option>
+            <option value="Simple Sketch">Simple Sketch</option>
+            <option value="Shaded Sketch">Shaded sketch</option>
+            <option value="Lineart">Lineart</option>
+            <option value="Lineart (Shaded)">Lineart (Shaded)</option>
+            <option value="Lineart (Flat colors)">Lineart (Flat colors)</option>
+            <option value="Full render">Full render</option>
+            <option value="Other (specify in comments)">Other (specify in comments)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Category of commission</label>
+          <select id="dropdown" name="Category" class="form-control" required="">
+            <option disabled="" selected="" value="">Select category of cropping</option>
+            <option value="Icon">Icon</option>
+            <option value="Bust">Bust</option>
+            <option value="Halfbody">Halfbody</option>
+            <option value="Fullbody">Fullbody</option>
+            <option value="Other (specify in comments)">Other (specify in comments)</option
+            ></select>
+        </div>
+        <div class="form-group" required="">
+          <label>How many characters would you want in the artwork?</label>
+          <select id="dropdown" name="Characters" class="form-control" required="">
+            <option disabled="" selected="" value="">Select number of characters</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="Other (specify in comments)">Other (specify in comments)</option>
+            </select>
+        </div>
+        <div class="form-group">
+          <label for="Reference images" name="Reference images">Add reference images for poses, characters, color palette, etc., in a Google Drive folder (check link so I have access!). If you don't want to use this method, you may send me the reference pictures when I contact you (Leave blank if you don't want to use this method).</label><br />
+          <textarea id="comments" class="input-textarea" name="comments" placeholder="Enter your Google Drive link here..."></textarea>
+           </div>
+          <div class="form-group">
+          <label>How did you find out about my commissions? (optional)</label>
+          <label name="Engagement">
+            <input name="engagement" value="Vgen" type="checkbox" class="input-checkbox">VGen</label>
+          <label>
+            <input name="engagement" value="Instagram" type="checkbox" class="input-checkbox">Instagram</label>
+          <label>
+            <input name="engagement" value="Twitter" type="checkbox" class="input-checkbox">Twitter (X)</label>
+          <label>
+            <input name="engagement" value="Tik Tok" type="checkbox" class="input-checkbox">Tik Tok</label>
+          <label>
+            <input name="Engagement" value="Other" type="checkbox" class="input-checkbox">Other</label>
+        </div>
+        <div class="form-group">
+          <label>Additional comments or specifications</label>
+          <textarea id="comments" class="input-textarea" name="comments" placeholder="Enter your comments here..."></textarea>
+        </div>
+        <div class="form-group">
+          <button type="submit" id="submit" class="submit-button">
+            Submit
+          </button>
+        </div>
+        </form>
+      </div>
+<script src="https://web3forms.com/client/script.js" async defer></script>
+  </body>
+</html>
+
+
+
